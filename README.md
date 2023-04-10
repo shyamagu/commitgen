@@ -39,8 +39,8 @@ Add alias below.
 **I confirmed the alias in GitBash on Windows, please modify this alias depending on your environment.**
 ```
 [alias]
-	ccg = !git diff --staged | node c:/dev/commitgen/commitgen.js \"$(cat -)\" | xargs git commit -m
-	ccgtest = !git diff --staged | node c:/dev/commitgen/commitgen.js \"$(cat -)\"
+	ccg = !git diff --staged | node {absolute path of the clone folder}/commitgen.js \"$(cat -)\" | xargs git commit -m
+	ccgtest = !git diff --staged | node {absolute path of the clone folder}/commitgen.js \"$(cat -)\"
 ```
 After edit the config, please use this tool like below.
 ```
