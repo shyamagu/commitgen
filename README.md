@@ -41,6 +41,7 @@ Add alias below.
 [alias]
 	ccg = !git diff --staged | node {absolute path of the clone folder}/commitgen.js \"$(cat -)\" | xargs git commit -m
 	ccgtest = !git diff --staged | node {absolute path of the clone folder}/commitgen.js \"$(cat -)\"
+	acp = !git add -A && git ccg && git push origin $1 &&:
 ```
 After edit the config, please use this tool like below.
 ```
@@ -49,3 +50,4 @@ git ccg
 ```
 'git ccg' automatically commit your code with comment that ChatGPT create.
 'git ccgtest' show the comment that ChatGPT create.
+'acp' is all-set of add-commit-push with ChatGPT comment.
